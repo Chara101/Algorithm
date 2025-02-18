@@ -17,7 +17,14 @@ vector<int> Merge_Sort(vector<int> origin, int length){
     vector<int> result;
     int pleft = 0;
     int pright = 0;
-    
+    while(true){
+    	if(pleft >= left.size() && pright >= right.size()) break;
+    	if(left[pleft] < right[pright]){
+    		result.push_back(left[pleft]);
+    		pleft++;
+		}
+	}
+	return result;
 }
 
 int main(){
