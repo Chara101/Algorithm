@@ -23,7 +23,19 @@ vector<int> Merge_Sort(vector<int> origin, int length){
     		result.push_back(left[pleft]);
     		pleft++;
 		}
+        else{
+            result.push_back(right[pright]);
+            pright++;
+        }
 	}
+    while(pleft < left.size()){
+        result.push_back(left[pleft]);
+        pleft++;
+    }
+    while(pright < right.size()){
+        result.push_back(right[pright]);
+        pright++;
+    }
 	return result;
 }
 
